@@ -4,7 +4,13 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-
+app.use(cors(
+  {
+    origin: ["https;//project-mern1.vercel.app"],
+    methods: {"POST","GET"},
+    credentials:true
+  }
+  ));
 // Connect Database
 connectDB();
 
