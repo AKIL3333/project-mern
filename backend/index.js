@@ -10,7 +10,13 @@ connectDB();
 
 // Init Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://project-mern-sooty.vercel.app/"],
+    methods: ["POST","GET"],
+    credentials:true
+    
+));
 
 // Define Routes
 app.use('/api/users', require('./routes/api/users'));
