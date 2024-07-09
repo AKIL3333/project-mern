@@ -15,6 +15,7 @@ app.use(cors(
     origin: ["https://project-mern-sooty.vercel.app/"],
     methods: ["POST","GET"],
     credentials:true
+  }
     
 ));
 
